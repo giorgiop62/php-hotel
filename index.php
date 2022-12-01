@@ -58,15 +58,32 @@
 
 
 <div class="container my-5">
-<ul>
-  <?php
-  foreach ($hotels as $hotelClass){
-    foreach($hotelClass as $hotel){
-      echo '<li>' . $hotel;
-    }
-  }
-  ?>
-</ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Descrizione</th>
+      <th scope="col">Parcheggio</th>
+      <th scope="col">Voto</th>
+      <th scope="col">Distanza dal centro</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+  <?php foreach ($hotels as $hotelClass) { ?>
+    <tr>
+      <th scope="row"><?php echo $hotelClass['name']; ?></th>
+      <td><?php echo $hotelClass['description']; ?></td>
+      <td><?php echo $hotelClass['parking']; ?></td>
+      <td><?php echo $hotelClass['vote']; ?></td>
+      <td><?php echo $hotelClass['distance_to_center']; ?></td>
+      
+    </tr>
+    <?php } ?>
+  </tbody>
+</table>
+
 
 
 
@@ -77,3 +94,4 @@
   
 </body>
 </html>
+
