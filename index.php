@@ -75,7 +75,7 @@
     <tr>
       <th scope="row"><?php echo $hotelClass['name']; ?></th>
       <td><?php echo $hotelClass['description']; ?></td>
-      <td><?php echo $hotelClass['parking']; ?></td>
+      <td><?php echo $hotelClass['parking'] ? 'SI' : 'NO'; ?></td>
       <td><?php echo $hotelClass['vote']; ?></td>
       <td><?php echo $hotelClass['distance_to_center']; ?></td>
       
@@ -83,7 +83,6 @@
     <?php } ?>
   </tbody>
 </table>
-
 
 
 
